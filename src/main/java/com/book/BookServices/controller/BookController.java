@@ -29,4 +29,8 @@ public class BookController {
         return  this.bookRepo.save(book);
     }
 
+    @DeleteMapping("/books/{id}")
+    public void deleteBook(@PathVariable long id){
+        this.bookRepo.deleteById(id);
+    }
 }
